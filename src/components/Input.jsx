@@ -2,15 +2,17 @@ import React , {useId} from "react";
 function Input({type="text", placeholder,labletext}){
     let id=useId();
     return (
-        <label htmlFor={id}>  
-            {labletext}  
+        <div className="space-y-2">
+            <label htmlFor={id} className="text-sm font-medium text-white">
+                {labletext}
+            </label>
             <input 
-            type={type} 
-            placeholder={placeholder} 
-            id={id}
-            className="bg-[#0d0f12] text-white w-full h-full p-2 outline-0 border-[4px] border-transparent rounded-xl focus:border-[#ffffff]"
-            ></input>
-        </label>
+                type={type} 
+                placeholder={placeholder} 
+                id={id}
+                className="w-full px-3 py-2 bg-[#1a1a1a] rounded-md border border-[#333] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent"
+            />
+        </div>
     )
 }
 

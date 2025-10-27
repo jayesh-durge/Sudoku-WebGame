@@ -1,10 +1,10 @@
 import React from "react";
-function Form({heading,subheading, children }){
+function Form({heading,subheading, children ,classname }){
     return (
-        <form action="" className="bg-[#060708] text-white p-5 border-[#0c0d11] border-8 rounded-xl">
-            <h1 className="capitalize font-bold text-2xl">{heading}</h1>
-            <h2 className="text-sm text-[#b4b5b5]">{subheading}</h2>
-            {children }
+        <form action="" className={`backdrop-blur-2xl text-white p-8 rounded-2xl w-[400px] shadow-2xl border border-white/5 ${classname}`}>
+            <h1 className="text-2xl font-semibold">{heading}</h1>
+            <h2 className="text-sm text-[#666] mt-1 mb-8">{subheading}</h2>
+            {children}
         </form>
     )
 }

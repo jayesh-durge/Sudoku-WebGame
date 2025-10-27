@@ -5,7 +5,7 @@ function Background(){
     </style>
     return (
         <>
-            <div className="bg-[#070b0f] w-screen h-screen flex overflow-hidden relative">
+            <div className="bg-[#070b0f] w-screen h-screen flex overflow-hidden absolute -z-10">
                 <div className="w-[40vh] h-[40vh] bg-[#141c29] rounded-full move1 "></div>
                 <div className="w-[40vh] h-[40vh] bg-[#032d168b] rounded-full move2 translate-1/2"></div>
                 <div className="w-[40vh] h-[40vh] bg-[#1440458f] rounded-full move3 translate-6"></div>
