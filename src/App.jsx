@@ -1,9 +1,11 @@
 import React from "react";
-import Rank from "./components/Ranked";
+import AccountDetails from "./pages/AccountDetails"
+import { Background } from "./components";
 function App(){
   return(
     <>
-        <Rank username={"jayesh_durge"} rank={1} score={1234567890}></Rank>
+      <Background/>
+      <AccountDetails></AccountDetails>
     </>
   )
 }
