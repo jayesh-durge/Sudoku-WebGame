@@ -22,6 +22,7 @@ function App(){
         level={14}
         rank={12}
         Bio={"word imposiable itself says im possible"}
+        self={true}
         Bagdes={[{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1}]}
         solvedProblem={13}
         totalProblem={15}

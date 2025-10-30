@@ -8,7 +8,7 @@ function ProfilePage({self=true,img,username,level,rank,Bio="",Bagdes=[],solvedP
             <div>
                 <nav className="sticky top-0 flex justify-between">
                     {!self && <ArrowLeft />}
-                    <h1>Player Profile</h1>
+                    <h1 className="text-2xl font-bold">Player Profile</h1>
                     {self && <DiamondMinus />}
                 </nav>
             </div>
