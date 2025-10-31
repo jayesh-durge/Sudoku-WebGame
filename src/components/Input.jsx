@@ -10,7 +10,7 @@ function Input({type="text", placeholder,labletext}){
                 type={type} 
                 placeholder={placeholder} 
                 id={id}
-                className="w-full px-3 py-2 bg-[#1a1a1a] rounded-md border border-[#333] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent"
+                className="w-full px-2 py-1 bg-[#1a1a1a]  mt-0.5 rounded-md border-2 border-[#232039] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent"
             />
         </div>
     )

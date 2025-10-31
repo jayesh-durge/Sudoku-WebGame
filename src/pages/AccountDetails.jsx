@@ -6,7 +6,7 @@ function AccountDetails(){
     let id2=useId();
     return (
         <div className="flex flex-col items-center  justify-around w-screen h-screen bg-transparent text-white overflow-scroll">
-                <Container classname={"my-15"}>
+                <Container classname={"my-15 bg-black"}>
                     <Form heading={"Account Details"} subheading={"Manage your profile information and how it appears to others."} classname={"w-[600px] h-[700px] overflow-scroll"}>
                         <div className="flex flex-col items-center mb-8">
                             <div className="relative mb-4">
@@ -30,15 +30,17 @@ function AccountDetails(){
                             Bio / About Me
                             <textarea id={id2}
                             placeholder="Digital artist and UX designer passionate about futuristic interfaces and immersive experiences. Exploring the intersection of creativity and technology." 
-                            className="w-full px-3 py-2 bg-[#1a1a1a] rounded-md border border-[#333] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent"
+                            className="w-full px-2 py-1 mt-0.5 bg-[#1a1a1a] rounded-md border-2 border-[#232039] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent h-22"
                             ></textarea>
                         </label>
-                            <ActionButton text={"Save Changes"} classname={"bg-[#9d85ff] w-full mt-1"}/>
+                          <div className="w-full justify-start items-center">
+                              <ActionButton text={"Save Changes"} classname={"bg-[#9d85ff] w-fit mt-2"}/>
+                          </div>
                         </div>
                     </Form>
                 </Container>
 
-                <Container classname={"my-15"}>
+                <Container classname={"my-15 bg-black"}>
                     <Form heading={"Security & Privacy"} subheading={"Update your password and enhance your account security."}
                     classname={"w-[600px] h-[550px]"}
                     >
@@ -46,14 +48,16 @@ function AccountDetails(){
                             <Input labletext={"Current Password"} type={"password"} placeholder={"••••••••"}/>
                             <Input labletext={"New Password"} type={"password"} placeholder={"••••••••"}/>
                             <Input labletext={"Confirm New Password"} type={"password"} placeholder={"••••••••"}/>
-                            <ActionButton text={"Change Password"} classname={"bg-[#9d85ff] w-full"}/>
+                            <div className="w-full justify-start items-center">
+                              <ActionButton text={"Change Password"} classname={"bg-[#9d85ff] w-fit mt-2"}/>
+                          </div>
                         </div>
                         <hr className="border-gray-800 my-7" />
-                        <div className="flex justify-end mt-auto">
+                        <div className="flex justify-end items-center w-full">
                             <ActionButton 
                                 text={"Delete Account"} 
-                                icon={<Trash2 size={12} />} 
-                                classname={"bg-[#ff4747] text-[12px] px-3 py-1.5 hover:bg-[#ff3333] transition-colors"}
+                                icon={<Trash2 size={14} />} 
+                                classname={"bg-[#ff4747] text-[14px] px-3 py-2 w-fit hover:bg-[#ff3333] transition-colors"}
                             />
                         </div>
                     </Form>
