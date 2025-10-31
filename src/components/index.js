@@ -8,5 +8,8 @@ import Form from "./Form"
 import GameControlButton from "./GameControlButton"
 import IconButton from "./IconButton"
 import Ranked from "./Ranked"
+import GameOver from "./GameOver"
+import ControlSection from "./ControlSection";
+import AccessicibilityBar from "./AccessicibilityBar"
 
-export {Input,ActionButton,Background,Container,DifficultyButton,EditorButton,Form,GameControlButton,IconButton,Ranked};
+export {Input,ActionButton,Background,Container,DifficultyButton,EditorButton,Form,GameControlButton,IconButton,Ranked,GameOver,ControlSection,AccessicibilityBar};
