@@ -35,7 +35,7 @@ function ScoreBoard(){
         
     ]
     return <>
-        <Container classname={"flex-col p-5 ml-2 h-screen w-[25vw] justify-start overflow-scroll bg-[#0f1115]"}>
+        <Container classname={"flex-col p-5 ml-2 h-screen w-[25vw] justify-start overflow-scroll bg-[#0f1115] border-2 border-[#0c4043]"}>
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">
                 <h1 className="text-transparent text-4xl font-bold text-center mb-7">Masterboard</h1>
             </div>

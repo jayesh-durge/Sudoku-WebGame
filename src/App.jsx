@@ -5,15 +5,17 @@ import Login from "./pages/Login"
 import AccountDetails from "./pages/AccountDetails"
 import ScoreBoard from "./pages/SocreBoard"
 import ProfilePage from "./pages/ProfilePage";
-import {GameOver,ControlSection,AccessicibilityBar} from "./components";
+import {Background,GameOver,ControlSection,AccessicibilityBar} from "./components";
+
 import {Flame} from "lucide-react"
 function App(){
   return(
-    <>
-      {/* <GamePage></GamePage> */}
+    <div className="w-screen h-screen overflow-hidden">
+      <Background/>
       {/* <SignUp></SignUp> */}
       {/* <Login></Login> */}
       {/* <AccountDetails></AccountDetails> */}
+      <GamePage></GamePage>
       {/* <ScoreBoard></ScoreBoard> */}
       {/* <ProfilePage 
         img={"./../profile.jpg"}
@@ -28,8 +30,8 @@ function App(){
       /> */}
       {/* <GameOver></GameOver> */}
       {/* <ControlSection></ControlSection> */}
-      <AccessicibilityBar/>
-    </>
+      {/* <AccessicibilityBar/> */}
+    </div>
   )
 }
 export default App;
