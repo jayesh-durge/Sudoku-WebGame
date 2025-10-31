@@ -1,13 +1,13 @@
 import React,{useId} from "react";
-import {DifficultyButton,Container,GameOver} from "./../components"
+import {DifficultyButton,Container,GameOver,ControlSection,AccessicibilityBar} from "./../components"
 import {ProfilePage, ScoreBoard} from "./../pages"
 import {Flame} from "lucide-react"
 
 function GamePage(){
     let difficultyLevels=["Initiate","Seeker","Solver","Strategist","Prodigy","Legend"];
-    let whichPage="";
+    let whichPage=" ";
     let viewscoreBoard=true;
-    let gameover=true;
+    let gameover=false;
     return (
         <div className="flex flex-col justify-between items-center w-screen h-screen">
             <header className="flex justify-between p-2 w-full h-full">
@@ -68,6 +68,10 @@ function GamePage(){
             <main className={`h-[70vh] absolute z-200 flex justify-center items-center transform translate-y-40 ${whichPage=="Profile"?"w-[50vw]":"-translate-x-50 w-[70vw]"}`}>
                 {gameover && <GameOver/>}
             </main>
+            <div className={`absolute z-100 w-[50vw] left-0 bottom-0 flex justify-between items-end px-2 pb-2 ${whichPage=="Profile" ? "justify-end transform translate-x-50":""}`}>
+                {whichPage!="Profile" && <AccessicibilityBar/>}
+                <ControlSection/>
+            </div>
         </div>
     )
 }
