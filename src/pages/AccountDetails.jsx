@@ -1,7 +1,7 @@
 import React,{useId} from "react";
 import {Container,Form,Input,ActionButton} from "./../components"
 import {Trash2,Camera} from "lucide-react"
-function AccountDetails(){
+function AccountDetails({username}){
     let id1=useId();
     let id2=useId();
     return (
@@ -15,7 +15,7 @@ function AccountDetails(){
                                     <Camera size={13} />
                                 </div>
                             </div>
-                            <h3 className="text-[17px] font-medium mb-1.5">Aurora_Nova</h3>
+                            <h3 className="text-xl font-medium mb-1.5 ">{username}</h3>
                             <label htmlFor={id1} className="text-[13px] text-[#9d85ff] cursor-pointer hover:text-[#8b71ff]">
                                 Update Profile Picture
                                 <input type="file" id={id1} className="hidden"/>
@@ -30,7 +30,7 @@ function AccountDetails(){
                             Bio / About Me
                             <textarea id={id2}
                             placeholder="Digital artist and UX designer passionate about futuristic interfaces and immersive experiences. Exploring the intersection of creativity and technology." 
-                            className="w-full px-2 py-1 mt-0.5 bg-[#1a1a1a] rounded-md border-2 border-[#232039] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent h-22"
+                            className="w-full px-2 py-1 mt-0.5 bg-[#1a1a1a] rounded-md border-2 border-[#232039] text-white focus:outline-none focus:ring-2 focus:ring-[#8a8aff] focus:border-transparent h-22 text-[12px]"
                             ></textarea>
                         </label>
                           <div className="w-full justify-start items-center">

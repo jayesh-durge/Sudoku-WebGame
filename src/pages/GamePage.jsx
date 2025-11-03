@@ -39,7 +39,7 @@ function GamePage(){
             <div className="flex flex-col h-screen justify-between items-center">
                 <div>
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">
-                        <h1 className="text-transparent text-6xl font-bold text-center">CYBER SUDOKU</h1>
+                        <h1 className="text-transparent text-6xl font-bold text-center">SudokuOrbis</h1>
                     </div>
                     <Container classname={"py-1 px-5 my-2 border-2 border-[#001e1a] bg-black overflow-x-scroll w-[50vw] "}>
                             {

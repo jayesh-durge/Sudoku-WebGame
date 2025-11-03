@@ -11,7 +11,7 @@ function App(){
       <Background/>
       {/* <SignUp></SignUp> */}
       {/* <Login></Login> */}
-      {/* <AccountDetails></AccountDetails> */}
+      {/* <AccountDetails username={"jayesh durge"}></AccountDetails> */}
       <GamePage></GamePage>
     </div>
   )
