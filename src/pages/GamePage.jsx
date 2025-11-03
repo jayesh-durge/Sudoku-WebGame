@@ -5,7 +5,7 @@ import {Flame} from "lucide-react"
 
 function GamePage(){
     let difficultyLevels=["Initiate","Seeker","Solver","Strategist","Prodigy","Legend"];
-    let whichPage="";
+    let whichPage="Profile";
     let viewscoreBoard=true;
     let gameover=true;
     return (
