@@ -1,36 +1,33 @@
-import React,{useId} from "react";
-import {DifficultyButton,Container,GameOver,ControlSection,AccessicibilityBar} from "./../components"
-import {ProfilePage, ScoreBoard} from "./../pages"
-import {Flame} from "lucide-react"
+import React,{useId,useState} from "react";
+import {DifficultyButton,Container,GameOver,ControlSection,AccessicibilityBar} from "./../components";
+import {ProfilePage, ScoreBoard} from "./../pages";
+import {Flame} from "lucide-react";
+import { Outlet ,Link, useLocation } from "react-router-dom";
+
 
 function GamePage(){
     let difficultyLevels=["Initiate","Seeker","Solver","Strategist","Prodigy","Legend"];
-    let whichPage="Profile";
-    let viewscoreBoard=true;
-    let gameover=true;
+    const location=useLocation();
+    let profilePage=location.pathname=="/Game-On/Profile";
+    let viewscoreBoard=!String(location.pathname).includes("/Game-On/Player");
+    let [gameOver,setGameover]=useState(false);
+
     return (
         <div className="flex w-screen h-screen justify-between p-2">
             <div >
                 {
-                    whichPage=="Profile"?
-                    <ProfilePage 
-                            img={"./../profile.jpg"}
-                            username={"jayesh durge"}
-                            level={14}
-                            rank={12}
-                            Bio={"word imposiable itself says im possible"}
-                            Bagdes={[{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1}]}
-                            solvedProblem={13}
-                            totalProblem={15}
-                            classname={"mr-1"}
-                    />
+                    profilePage?
+                    <Outlet/>
                     :
                     <div className="flex flex-col justify-between h-screen">
+                        <Link to={"/Game-On/Profile"}>
                             <img 
-                            src="./../profile.jpg" 
-                            alt=""
-                            className="rounded-full w-15 h-15 border-3 border-[#009999]"
-                        />
+                                src="./../profile.jpg" 
+                                alt=""
+                                className="rounded-full w-15 h-15 border-3 border-[#009999]"
+                            />
+                        </Link>
+                            
                         <AccessicibilityBar/>
                     </div>
                     
@@ -39,17 +36,17 @@ function GamePage(){
             <div className="flex flex-col h-screen justify-between items-center">
                 <div>
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">
-                        <h1 className="text-transparent text-6xl font-bold text-center">SudokuOrbis</h1>
+                        <h1 className="text-transparent text-6xl font-bold text-center"><Link to={"/Game-On"}>SudokuOrbis</Link></h1>
                     </div>
                     <Container classname={"py-1 px-5 my-2 border-2 border-[#001e1a] bg-black overflow-x-scroll w-[50vw] "}>
                             {
                                 difficultyLevels.map((val,i)=>{
-                                    return <DifficultyButton key={useId()} text={val} active={i==2}/>;
+                                    return <DifficultyButton key={useId()} text={val} active={0}/>;
                                 })
-                            }       
+                            }
                     </Container>
                 </div>
-                {gameover && <GameOver/>}
+                {gameOver && <GameOver/>}
                 <ControlSection/>
             </div>
             <div>
@@ -57,18 +54,7 @@ function GamePage(){
                     viewscoreBoard?
                     <ScoreBoard/>
                     :
-                    <ProfilePage 
-                        img={"./../profile.jpg"}
-                        username={"jayesh durge"}
-                        level={14}
-                        rank={12}
-                        self={false}
-                        Bio={"word imposiable itself says im possible"}
-                        Bagdes={[{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1},{text:"supers",icon:<Flame />,id:1}]}
-                        solvedProblem={13}
-                        totalProblem={15}
-                        classname={"mr-1"}
-                    />
+                    <Outlet/>
                 }
             </div>
         </div>

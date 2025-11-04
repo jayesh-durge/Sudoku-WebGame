@@ -1,6 +1,7 @@
 import React from "react";
 import {Input,Form,Background,Container,ActionButton} from "./../components"
 import {Chromium} from "lucide-react"
+import {Link} from "react-router-dom"
 function SignUp(){
     return (
         <>
@@ -8,7 +9,6 @@ function SignUp(){
                     <Form heading={"Welcome"} subheading={"Sign Up to create account."} classname={"bg-white/5 backdrop-blur-md border border-white/20 "}>
                         <div className="space-y-6">
                             <div className="space-y-4">
-                                
                                 <Input type={"text"} placeholder={"john doe"} labletext={"Username"}/>
                                 <Input type={"email"} placeholder={"john.doe@example.com"} labletext={"Email Address"}/>
                                 <Input type={"password"} placeholder={"••••••••••"} labletext={"Password"}/>
@@ -32,7 +32,7 @@ function SignUp(){
                         </div>
                         <div className="pt-6 text-center text-sm border-t border-[#333] mt-6">
                             <span className="text-[#666]">Already have an account? </span>
-                            <a href="#" className="text-[#8a8aff] hover:underline">Sign In</a>
+                            <Link to={"/login"} className="text-[#8a8aff] hover:underline">Sign In</Link>
                         </div>
                     </Form>
             </div>

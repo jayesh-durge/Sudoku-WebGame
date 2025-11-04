@@ -1,6 +1,7 @@
 import React from "react";
 import {Input,Form,Background,Container,ActionButton} from "./../components"
 import {Chromium} from "lucide-react"
+import {Link} from "react-router-dom"
 function Login(){
     return (
         <>
@@ -34,7 +35,7 @@ function Login(){
                         </div>
                         <div className="pt-6 text-center text-sm border-t border-[#333] mt-6">
                             <span className="text-[#666]">Don't have an account? </span>
-                            <a href="#" className="text-[#8a8aff] hover:underline">Sign Up</a>
+                            <Link to={"/Sign-up"} className="text-[#8a8aff] hover:underline">Sign Up</Link>
                         </div>
                     </Form>
             </div>

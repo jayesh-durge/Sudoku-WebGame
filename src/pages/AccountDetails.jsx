@@ -1,11 +1,17 @@
 import React,{useId} from "react";
 import {Container,Form,Input,ActionButton} from "./../components"
-import {Trash2,Camera} from "lucide-react"
+import {LogOut,Camera,ArrowLeft} from "lucide-react"
+import { Link } from "react-router-dom";
 function AccountDetails({username}){
     let id1=useId();
     let id2=useId();
     return (
         <div className="flex flex-col items-center  justify-around w-screen h-screen bg-transparent text-white overflow-scroll">
+                <Link 
+                className="w-screen flex justify-start items-center p-3 text-2xl capitalize"
+                to={"/Game-On"}
+                ><ArrowLeft size={30} /> back to game board</Link>
+
                 <Container classname={"my-15 bg-black"}>
                     <Form heading={"Account Details"} subheading={"Manage your profile information and how it appears to others."} classname={"w-[600px] h-[700px] overflow-scroll"}>
                         <div className="flex flex-col items-center mb-8">
@@ -55,8 +61,8 @@ function AccountDetails({username}){
                         <hr className="border-gray-800 my-7" />
                         <div className="flex justify-end items-center w-full">
                             <ActionButton 
-                                text={"Delete Account"} 
-                                icon={<Trash2 size={14} />} 
+                                text={"Log out"} 
+                                icon={<LogOut size={14}/>} 
                                 classname={"bg-[#ff4747] text-[14px] px-3 py-2 w-fit hover:bg-[#ff3333] transition-colors"}
                             />
                         </div>
