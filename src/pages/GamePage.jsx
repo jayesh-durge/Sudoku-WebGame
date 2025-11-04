@@ -7,10 +7,11 @@ import { Outlet ,Link, useLocation } from "react-router-dom";
 
 function GamePage(){
     let difficultyLevels=["Initiate","Seeker","Solver","Strategist","Prodigy","Legend"];
-    const location=useLocation();
-    let profilePage=location.pathname=="/Game-On/Profile";
-    let viewscoreBoard=!String(location.pathname).includes("/Game-On/Player");
+    const location=useLocation().pathname;
+    let profilePage=location=="/Game-On/Profile";
+    let viewscoreBoard=!String(location).includes("/Game-On/Player");
     let [gameOver,setGameover]=useState(false);
+    let [difificulty,setDifficulty]=useState("Solver");
 
     return (
         <div className="flex w-screen h-screen justify-between p-2">
@@ -41,7 +42,7 @@ function GamePage(){
                     <Container classname={"py-1 px-5 my-2 border-2 border-[#001e1a] bg-black overflow-x-scroll w-[50vw] "}>
                             {
                                 difficultyLevels.map((val,i)=>{
-                                    return <DifficultyButton key={useId()} text={val} active={0}/>;
+                                    return <DifficultyButton key={useId()} text={val} active={val==difificulty} setDifficulty={setDifficulty} />;
                                 })
                             }
                     </Container>
