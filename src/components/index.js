@@ -11,5 +11,6 @@ import Ranked from "./Ranked"
 import GameOver from "./GameOver"
 import ControlSection from "./ControlSection";
 import AccessicibilityBar from "./AccessicibilityBar"
+import SudokuBoard from "./SudokuBoard";
 
-export {Input,ActionButton,Background,Container,DifficultyButton,EditorButton,Form,GameControlButton,IconButton,Ranked,GameOver,ControlSection,AccessicibilityBar};
+export {Input,ActionButton,Background,Container,DifficultyButton,EditorButton,Form,GameControlButton,IconButton,Ranked,GameOver,ControlSection,AccessicibilityBar,SudokuBoard};

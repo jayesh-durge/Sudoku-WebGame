@@ -1,5 +1,5 @@
 import React,{useId,useState} from "react";
-import {DifficultyButton,Container,GameOver,ControlSection,AccessicibilityBar} from "./../components";
+import {DifficultyButton,Container,GameOver,ControlSection,AccessicibilityBar, SudokuBoard} from "./../components";
 import {ProfilePage, ScoreBoard} from "./../pages";
 import {Flame} from "lucide-react";
 import { Outlet ,Link, useLocation } from "react-router-dom";
@@ -47,6 +47,7 @@ function GamePage(){
                             }
                     </Container>
                 </div>
+                <SudokuBoard/>
                 {gameOver && <GameOver/>}
                 <ControlSection/>
             </div>
